@@ -1,0 +1,18 @@
+server {
+  listen 443 default_server;
+  listen [::]:443 default_server;  root /var/www/tudorevans.uk;  index index.html;  server_name tudorevans.uk tudorevans.uk; location / {
+    try_files $uri $uri/ =404;
+  }
+  ssl on;
+  ssl_certificate /etc/letsencrypt/live/tudorevans.uk/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/tudorevans.uk/privkey.pem;
+  location = / {
+    return 301 /index.html;
+  }
+}
+
+server {
+       listen 0.0.0.0:80;
+       server_name tudorevans.uk www.tudorevans.uk;
+       rewrite ^ https://$host$request_uri? permanent;
+}
