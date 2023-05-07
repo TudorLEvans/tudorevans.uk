@@ -83,7 +83,7 @@
 		<h3>Jungle Sauce</h3>
 		<li><a href="jungle-sauce-in-a.pdf">Jungle Sauce in A</a></li>
 		<li><a href="jungle-sauce-in-b.pdf">Jungle Sauce in B</a></li>
-		<li><a href="jungle-sauce-in-f#.pdf">Jungle Sauce in F#</a></li>
+		<li><a href="jungle-sauce-in-f-sharp.pdf">Jungle Sauce in F#</a></li>
 	</ul>
 </div>
 
