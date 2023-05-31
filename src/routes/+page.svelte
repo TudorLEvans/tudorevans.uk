@@ -73,6 +73,8 @@
 				>He Was a Friend of Mine (guitar accompaniment arrangement)</a
 			>
 		</li>
+		<li><a href="uma-prece-in-g.pdf">Uma Prece (in G)</a></li>
+		<li><a href="uma-prece-in-a.pdf">Uma Prece (in A)</a></li>
 	</ul>
 	<ul>
 		<h3>Riverside Maxixe</h3>
