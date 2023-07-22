@@ -42,5 +42,5 @@ You can preview the production build with `npm run preview`.
 To publish, run:
 
 ```
-scp ./.svelte-kit/output/client root@206.189.28.112:/var/www/tudorevans.uk
+scp -r ./build/* root@206.189.28.112:/var/www/tudorevans.uk
 ```

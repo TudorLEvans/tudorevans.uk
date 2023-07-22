@@ -82,10 +82,9 @@
 		<li><a href="riverside-maxixe-in-g-alt.pdf">Riverside Maxixe in G</a></li>
 		<li><a href="riverside-maxixe-in-a-alt.pdf">Riverside Maxixe in A</a></li>
 		<li><a href="riverside-maxixe-in-e-alt.pdf">Riverside Maxixe in E</a></li>
-		<h3>Jungle Sauce</h3>
-		<li><a href="jungle-sauce-in-a.pdf">Jungle Sauce in A</a></li>
-		<li><a href="jungle-sauce-in-b.pdf">Jungle Sauce in B</a></li>
-		<li><a href="jungle-sauce-in-f-sharp.pdf">Jungle Sauce in F#</a></li>
+		<h3>The Joyful Song</h3>
+		<li><a href="the-joyful-song-in-a.pdf">The Joyful Song in A</a></li>
+		<li><a href="the-joyful-song-in-b.pdf">The Joyful Song in B</a></li>
 	</ul>
 </div>
 
