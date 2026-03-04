@@ -1,11 +1,50 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Tudor Evans">
+	<div class="container">
+		<section class="hero">
+			<span class="hero-eyebrow">// software engineer &amp; engineering manager</span>
+			<h1>Tudor Evans</h1>
+			<p class="hero-desc">
+				I build systems, grow teams, and think carefully about how software gets made.
+				Writing about engineering, leadership, and the craft of building things that last.
+			</p>
+			<div class="hero-actions">
+				<a href="/about" class="btn btn-primary">about me</a>
+				<button class="hero-email" id="copy-email" data-email="tudorlucienevans@gmail.com">
+					tudorlucienevans@gmail.com
+				</button>
+			</div>
+		</section>
+
+		<section class="section tight">
+			<p class="section-title">more links</p>
+			<ul class="nav-list">
+				<li><a href="/management-principles">Management principles</a></li>
+				<li><a href="https://thetudor.substack.com" target="_blank" rel="noopener">Writing</a></li>
+				<li><a href="/music">Music</a></li>
+				<li><a href="/date-me">Date me</a></li>
+			</ul>
+		</section>
+
+		<section class="section tight">
+			<p class="section-title">get in touch</p>
+			<ul class="nav-list">
+				<li><a href="https://thetudor.substack.com" target="_blank" rel="noopener">Substack</a></li>
+				<li><a href="https://github.com/TudorLEvans" target="_blank" rel="noopener">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/tudor-evans-5a2232151/" target="_blank" rel="noopener">LinkedIn</a></li>
+			</ul>
+		</section>
+	</div>
 </Layout>
+
+<script>
+	const btn = document.getElementById('copy-email');
+	btn?.addEventListener('click', () => {
+		navigator.clipboard.writeText((btn as HTMLElement).dataset.email ?? '');
+		btn.classList.add('copied');
+		setTimeout(() => btn.classList.remove('copied'), 1500);
+	});
+</script>
