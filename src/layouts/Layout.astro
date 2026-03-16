@@ -46,8 +46,27 @@ const navLinks = [
 					<a href="https://github.com/TudorLEvans" target="_blank" rel="noopener">github</a>
 					<a href="https://www.linkedin.com/in/tudor-evans-5a2232151/" target="_blank" rel="noopener">linkedin</a>
 					<a href="https://thetudor.substack.com" target="_blank" rel="noopener">substack</a>
+					<button class="spice-btn" id="spice-trigger" aria-label="The spice">&#x2022;</button>
 				</div>
 			</div>
 		</footer>
+
+		<div class="spice-overlay" id="spice-overlay" role="dialog" aria-modal="true">
+			<div class="spice-eyes">
+				<div class="spice-eye"></div>
+				<div class="spice-eye"></div>
+			</div>
+			<p class="spice-text">The spice must flow</p>
+		</div>
+
+		<script>
+			const trigger = document.getElementById('spice-trigger');
+			const overlay = document.getElementById('spice-overlay');
+			trigger?.addEventListener('click', () => overlay?.classList.add('visible'));
+			overlay?.addEventListener('click', () => overlay.classList.remove('visible'));
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape') overlay?.classList.remove('visible');
+			});
+		</script>
 	</body>
 </html>
