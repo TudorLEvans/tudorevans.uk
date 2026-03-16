@@ -5,17 +5,15 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Tudor Evans">
 	<div class="container">
 		<section class="hero">
-			<span class="hero-eyebrow">// software engineer &amp; engineering manager</span>
+			<span class="hero-eyebrow">Software Engineer &amp; Engineering Manager</span>
 			<h1>Tudor Evans</h1>
 			<p class="hero-desc">
-				I build systems, grow teams, and think carefully about how software gets made.
-				Writing about engineering, leadership, and the craft of building things that last.
+				I'm a software engineer and engineering manager working on web technologies.
+				I have a particular interest in the intersection between tech and commercial orgs.	
 			</p>
 			<div class="hero-actions">
 				<a href="/about" class="btn btn-primary">about me</a>
-				<button class="hero-email" id="copy-email" data-email="tudorlucienevans@gmail.com">
-					tudorlucienevans@gmail.com
-				</button>
+				<a href="/cv" class="btn btn-outline">curriculum vitae</a>
 			</div>
 		</section>
 
@@ -32,19 +30,16 @@ import Layout from '../layouts/Layout.astro';
 		<section class="section tight">
 			<p class="section-title">get in touch</p>
 			<ul class="nav-list">
-				<li><a href="https://thetudor.substack.com" target="_blank" rel="noopener">Substack</a></li>
 				<li><a href="https://github.com/TudorLEvans" target="_blank" rel="noopener">GitHub</a></li>
 				<li><a href="https://www.linkedin.com/in/tudor-evans-5a2232151/" target="_blank" rel="noopener">LinkedIn</a></li>
 			</ul>
 		</section>
+
+		<section class="section tight">
+			<p class="section-title">subscribe</p>
+			<div class="substack-wrap">
+				<iframe src="https://thetudor.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
+			</div>
+		</section>
 	</div>
 </Layout>
-
-<script>
-	const btn = document.getElementById('copy-email');
-	btn?.addEventListener('click', () => {
-		navigator.clipboard.writeText((btn as HTMLElement).dataset.email ?? '');
-		btn.classList.add('copied');
-		setTimeout(() => btn.classList.remove('copied'), 1500);
-	});
-</script>

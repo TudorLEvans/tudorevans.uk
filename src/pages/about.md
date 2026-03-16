@@ -61,12 +61,15 @@ And for books:
 - Les Miserables
 - DUUUNE! (all six Frank Herbert books)
 - The Lord of the Rings
+- Candide
+- Perfume
 
 And for movies:
 
 - The Life And Death Of Colonel Blimp
 - Apocalypse Now
 - Body Double
+- Face/Off
 - It's A Wonderful Life
 - Mulholland Drive
 - Withnail & I
