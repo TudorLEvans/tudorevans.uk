@@ -82,7 +82,7 @@ And for movies:
 And for TV:
 
 - Peep Show
-- Twin Peeks
+- Twin Peaks
 - Battlestar Galactica
 - Alan Partridge
 - Frasier
