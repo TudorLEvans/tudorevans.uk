@@ -602,6 +602,27 @@ main {
 }
 
 /* ============================================================
+   Blog
+   ============================================================ */
+.post-subtitle {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #6b6456;
+  margin: 0.35rem 0 0;
+  line-height: 1.5;
+}
+
+.post-date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+  margin: 0.25rem 0 2rem;
+}
+
+
+/* ============================================================
    Spice Easter Egg
    ============================================================ */
 .spice-btn {

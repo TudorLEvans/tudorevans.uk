@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const posts = (await Astro.glob('./*.md')).sort(
+	(a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+);
+---
+
+<Layout title="Blog — Tudor Evans">
+	<div class="container">
+		<div class="prose">
+			<h1>Blog</h1>
+			<p>
+				This is a collection of my most popular Substack posts.
+				I've stored them here because, whilst Substack is a great platform for extending reach
+				and email functionality, I don't fundamentally trust it as a permanent store of my writing.
+				It's also terrible for search engine and LLM discoverability compared to my own server.
+				Seize the means of digital production!
+			</p>
+			<ul>
+				{posts.map(post => (
+					<li><a href={post.url}>{post.frontmatter.title}</a></li>
+				))}
+			</ul>
+		</div>
+	</div>
+</Layout>

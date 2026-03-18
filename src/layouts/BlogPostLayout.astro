@@ -1,0 +1,17 @@
+---
+import Layout from './Layout.astro';
+const { frontmatter } = Astro.props;
+const date = new Date(frontmatter.date);
+const dateStr = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<Layout title={`${frontmatter.title} — Tudor Evans`}>
+	<div class="container">
+		<article class="prose">
+			<h1>{frontmatter.title}</h1>
+			{frontmatter.subtitle && <p class="post-subtitle">{frontmatter.subtitle}</p>}
+			<time class="post-date" datetime={frontmatter.date}>{dateStr}</time>
+			<slot />
+		</article>
+	</div>
+</Layout>
