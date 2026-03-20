@@ -725,6 +725,58 @@ main {
 }
 
 /* ============================================================
+   CV actions (print button)
+   ============================================================ */
+.cv-actions {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ============================================================
+   Print / PDF export
+   ============================================================ */
+@media print {
+  :root {
+    --bg:         #fff;
+    --surface:    #f5f5f5;
+    --border:     #ccc;
+    --text:       #111;
+    --text-muted: #444;
+    --accent:     #555;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+    min-height: unset;
+  }
+
+  .site-header,
+  .site-footer,
+  .cv-actions {
+    display: none !important;
+  }
+
+  .prose {
+    padding: 0;
+  }
+
+  .prose a {
+    color: #111;
+    text-decoration: none;
+  }
+
+  .prose h3 + p > em:only-child {
+    color: #444;
+  }
+
+  @page {
+    margin: 1.5cm 2cm;
+  }
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 560px) {

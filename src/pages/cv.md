@@ -1,13 +1,14 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
 title: CV — Tudor Evans
+pdfExport: true
 ---
 
-# CV
+# Tudor Evans CV
 
 I'm a software engineer and engineering manager. I work mostly in web dev and distributed systems. I consider myself an all-rounder and enjoy working cross-functionally with product, marketing and sales. I think I'm a good communicator and project manager too. I especially like written and spoken communication, and have received very positive feedback about my presenting and writing style. I have a [Substack newletter](https://thetudor.substack.com/) so you can make your own mind up on that front!
 
-In my current role at Speechmatics, I'm the team lead for our self-service product offering. Check it out [here](https://portal.speechmatics.com).
+In my current role at Speechmatics, I'm the team lead for our self-service product offering. Check it out at [portal.speechmatics.com](https://portal.speechmatics.com).
 
 Last reviewed 2026-03-16.
 
@@ -75,8 +76,6 @@ Some highlights:
 - I did a week-long SaaS architecture principles course.
 - I worked on PoC projects to re-architect systems for departments including DWP and DEFRA, including developing decentralised event-driven architectures for cross-department systems interfacing.
 
----
-
 ## Education
 
 ### MSci History & Philosophy of Science
@@ -85,10 +84,19 @@ Some highlights:
 ### BA Natural Science (Physics)
 *University of Cambridge · 2015 – 2018 · Triple First*
 
----
-
 ## Skills
 
 - **Languages** — TypeScript, Go, Python, Rust
 - **Infrastructure** — AWS, Azure, Kubernetes, Terraform, PostgreSQL, Redis, Kafka
 - **Certifications** — AWS Solutions Architect Professional
+- **Soft Skills** — presenting, technical communication, running effective meetings, people management, project management
+
+## Personal
+
+In my spare time, I enjoy playing jazz and classical guitar, watching movies, reading classic literature and swing dancing.
+
+You can find out more about me as an individual at [tudorevans.uk/about](https://tudorevans.uk/about).
+
+## References
+
+References available on request.

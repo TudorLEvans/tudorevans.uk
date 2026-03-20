@@ -5,8 +5,19 @@ const { frontmatter } = Astro.props;
 
 <Layout title={frontmatter.title}>
 	<div class="container">
+		{frontmatter.pdfExport && (
+			<div class="cv-actions">
+				<button class="btn btn-outline cv-print-btn" id="cv-print-btn">Export PDF</button>
+			</div>
+		)}
 		<article class="prose">
 			<slot />
 		</article>
 	</div>
 </Layout>
+
+{frontmatter.pdfExport && (
+	<script>
+		document.getElementById('cv-print-btn')?.addEventListener('click', () => window.print());
+	</script>
+)}
