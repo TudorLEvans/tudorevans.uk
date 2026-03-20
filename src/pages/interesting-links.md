@@ -10,8 +10,8 @@ At Speechmatics, we've always maintained an interesting links channel in teams, 
 Lsat reviewed 2026-03-18.
 
 - [The Grug-Brained Developer](https://grugbrain.dev/) - how to be smart by being caveman levels of dumb
-- [You and Your Research](/public/you-and-your-research.pdf) - how to get things done in research environments
-- [The Power of the Context](/public/the-power-of-the-context.pdf) - on the importance of creating great environments for good work to get done
+- [You and Your Research](/you-and-your-research.pdf) - how to get things done in research environments
+- [The Power of the Context](/the-power-of-the-context.pdf) - on the importance of creating great environments for good work to get done
 - [Ben Kuhn's Blog](https://www.benkuhn.net/) - Ben Kuhn has done great things at Wave and Anthropic and shares some of his tips here
 - [The Law of Leaky Abstractions](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/) - a classic, must read for tech people
 - [Putting the "You" in CPU](https://cpu.land/) - a great, no nonsense primer on how computers work
