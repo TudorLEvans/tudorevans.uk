@@ -7,7 +7,6 @@ title: Music — Tudor Evans
 
 Jazz transcriptions and arrangements, mostly for small ensembles. Everything here is shared for personal entertainment and educational purposes only.
 
----
 
 ## Spain — Chick Corea
 
@@ -16,7 +15,6 @@ Jazz transcriptions and arrangements, mostly for small ensembles. Everything her
 - [Spain in C♯ minor](/spain-new-in-e.pdf)
 - [Spain in A minor](/spain-new-in-c.pdf)
 
----
 
 ## Hallelujah, I Love Her So
 
@@ -29,7 +27,11 @@ Transcribed and arranged by Ben Rosenfeld-Schreiber.
 - [Lead part for E♭ instruments](/Hallelujah,_I_Love_Her_So-Eb_1.pdf)
 - [Second part for E♭ instruments](/Hallelujah,_I_Love_Her_So-Eb_2.pdf)
 
----
+## Chalmette Sunsets (lead sheet) - Tuba Skinny
+
+- [For C instruments](/chalmette-sunsets-in-c.pdf)
+- [For Bb instruments](/chalmette-sunsets-in-Bb.pdf)
+- [For Eb instruments](/chalmette-sunsets-in-Eb.pdf)]
 
 ## Carinhoso
 
@@ -37,7 +39,6 @@ Transcribed and arranged by Ben Rosenfeld-Schreiber.
 - [Lead part for B♭ instruments](/carinhoso-in-Bb.pdf)
 - [Lead part for E♭ instruments](/carinhoso-in-Eb.pdf)
 
----
 
 ## Strasbourg / St. Denis
 
@@ -45,15 +46,11 @@ Transcribed and arranged by Ben Rosenfeld-Schreiber.
 - [Lead sheet in B♭](/strasbourg-in-Bb.pdf)
 - [Lead sheet in E♭](/strasbourg-in-Eb.pdf)
 
----
-
 ## Birdland
 
 Complete score and individual parts (work in progress).
 
 - [Birdland](/birdland.pdf)
-
----
 
 ## Is You Is Or Is You Ain't Got That Swing, Baby?
 
@@ -61,7 +58,6 @@ Complete score and individual parts (work in progress).
 - [For B♭ instruments](/is-you-is-or-is-you-aint-got-that-swing-baby-Bb.pdf)
 - [For E♭ instruments](/is-you-is-or-is-you-aint-got-that-swing-baby-Eb.pdf)
 
----
 
 ## Riverside Maxixe
 
@@ -70,7 +66,6 @@ Complete score and individual parts (work in progress).
 - [Riverside Maxixe in A](/riverside-maxixe-in-a-alt.pdf)
 - [Riverside Maxixe in E](/riverside-maxixe-in-e-alt.pdf)
 
----
 
 ## I Hope You Won't Be Coming Too Soon
 
@@ -79,14 +74,12 @@ Complete score and individual parts (work in progress).
 - [In A](/i-hope-you-wont-be-coming-too-soon-in-a.pdf)
 - [In G](/i-hope-you-wont-be-coming-too-soon-in-g.pdf)
 
----
 
 ## Dancing When We Meet
 
 - [In B](/dancing-when-we-meet-in-b.pdf)
 - [In A](/dancing-when-we-meet-in-a.pdf)
 
----
 
 ## Miscellaneous
 
