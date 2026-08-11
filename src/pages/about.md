@@ -5,17 +5,28 @@ title: About — Tudor Evans
 
 # Hi, I'm Tudor
 
-I'm a software engineer and engineering manager based in the Cambridge, UK. You can read my [CV](./cv.md) to find out about my career.
+I'm a software engineer and engineering manager based in the Cambridge, UK. You can read my [CV](./cv) to find out about my career.
 
 ## Hobbies
 
-Music forms a decent chunk of my time sync outside of work. I play electric and classical guitar, and less frequently bass guitar, in a jazz band. I also like to noodle on the ivories, but the quality bar is low there. I'm a regular swing dancer - come say hi if you see me near a dance floor!
+Here are the things outside work that take up my life, in no particular order:
 
-Outside of that, it's reading, writing (subscribe to my substack!) and movie-going. Oh, and board games, which I play frequently with my friends. Yes, we're STANDARD NERDS! But the cool kind so it's okay.
-
-## Talk to me about...
-
-The Claudio-Julian dynasty, the history of the British Empire, epistemic philosophy, the metaphysics of religion, the future of democracy, the modern tech industry, the 19th century novel, Herman Melville's unreasonable use of exclamation marks, your life story, the last book you read / movie you saw / board game you played. Why not try to cover all these topics in one conversation? Anything to avoid being goddamn boring.
+- Singing
+- Playing guitar
+- Dancing
+- Pub
+- Reading
+- Discussing ideas
+- Writing
+- Art galleries / museums
+- Opera
+- Movies
+- Photography
+- Running
+- Badminton
+- Skiing
+- Walking
+- TV
 
 ## Taste
 
@@ -35,6 +46,7 @@ What matters isn't that you like music, but the music you like. So here's a samp
 - Jimi Hendrix
 - Cream
 - Tuba Skinny
+- Fats Waller
 
 And for books:
 
@@ -49,6 +61,8 @@ And for books:
 - The Lord of the Rings
 - Candide
 - Perfume
+
+Also a healthy diet of non-fiction, but it's often work related...
 
 And for movies:
 
@@ -72,4 +86,5 @@ And for TV:
 - Battlestar Galactica
 - Alan Partridge
 - Frasier
+- The Simpsons
 - American Horror Story (the older series only)
