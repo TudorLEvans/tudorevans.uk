@@ -5,21 +5,7 @@ title: About — Tudor Evans
 
 # Hi, I'm Tudor
 
-I'm a software engineer and engineering manager based in the Cambridge, UK.
-
-## Personal history
-
-Every once in a while, a truly special person is birthed into this world, someone who, by virtue of their character, and the time into which they are born, is destined to shake the foundations of the universe and attain to great things.
-
-More frequently, children are born in central Swansea. Such were my personal origins in the nineteen hundred and ninety-seventh year of our Lord, whence I came kicking and screaming into this undeserving world in the now-shuttered maternity ward of Singleton Hospital.
-
-Wherefore it is that I - or indeed any of us for that matter - should have grown up within the location we did, none but God can say. But the history books will record - yes, they will, and many of them shall be written too - that I lived my formative years in a large village named Three Crosses, or Y Crwys in the local tongue, in an aged, not to mention damp, nor to mention drafty, old farmer's cottage. Pen-Y-Wern, or head of the hill as we may call it, was and is a ramshackle, rheumy old pile of stones, as much a character and member of the family as any cranky grandparent or strange great-uncle.
-
-Thereupon, and with great trepidation, did I apply myself to my studies in the local primary school, and latterly at Bishopston Comprehensive, excelling in matters academic, sporting, and social, before at last graduating to the local sixth form college in Gorseinon.
-
-At last, having attained the right and proper grades, that sweet, beautiful taste of academic freedom was mine. What beautiful edifices, what dreamy spires, did Cambridge enbosom for me in those wondrous youthful years! Ah, that I could return to those honey-dewed days of yonder!
-
-Then I worked as a technology consultant at IBM and somewhere along the way I had the olde Englishe stylings beaten out of me. Sad!
+I'm a software engineer and engineering manager based in the Cambridge, UK. You can read my [CV](./cv.md) to find out about my career.
 
 ## Hobbies
 

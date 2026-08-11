@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Design Tokens
+   Design Tokens — "Aged Paper": bookish, early-20th-century,
+   a little jazz. Warm cream stock, sepia ink, brass accent.
    ============================================================ */
 :root {
-  --bg:           #0d0c09;
-  --surface:      #171510;
-  --border:       #38342a;
-  --text:         #e6ddc8;
-  --text-muted:   #ccc0a8;
-  --accent:       #c97a1a;
+  --bg:            #f8f3e6;  /* light ivory paper          */
+  --surface:       #efe7d2;  /* deeper panel / card stock  */
+  --border:        #dccca4;  /* soft tan rule              */
+  --text:          #2b2419;  /* dark sepia ink             */
+  --text-muted:    #6f6146;  /* muted brown                */
+  --accent:        #2f6b6b;  /* petrol teal                */
+  --accent-bright: #3d8888;  /* lit teal (hovers)          */
+  --ink-strong:    #191309;  /* near-black for emphasis    */
 
-  --font-sans: 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
-  --font-mono: ui-monospace, 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font-body:    'EB Garamond', 'Iowan Old Style', Palatino, Georgia, serif;
+  --font-display: 'Fraunces Variable', 'EB Garamond', Georgia, serif;
+  --font-mono:    ui-monospace, 'JetBrains Mono', 'Cascadia Code', monospace;
 
   --max-w:    680px;
   --pad-x:    1.5rem;
@@ -33,13 +37,22 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+  font-size: 1.18rem;
+  line-height: 1.6;
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Reusable small-caps label treatment (nav, eyebrows, buttons…) */
+.label {
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  text-transform: none;
+  letter-spacing: 0.06em;
 }
 
 /* ============================================================
@@ -62,53 +75,44 @@ main {
 .site-header {
   padding: 1.25rem 0;
   border-bottom: 1px solid var(--border);
-  border-top: 3px solid var(--accent);
 }
 
-.site-header .container {
+/* Running-head: one centred line of spaced small caps, middot-separated */
+.running-head {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 
-.site-name {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text);
-  text-decoration: none;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  opacity: 0.9;
-  transition: opacity 0.15s;
-}
-
-.site-name:hover {
-  opacity: 1;
-  text-decoration: none;
-}
-
-.site-nav {
-  display: flex;
-  gap: 1.75rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.site-nav a {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.running-head a {
+  font-family: var(--font-display);
+  font-variant: small-caps;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   color: var(--text-muted);
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.15s;
 }
 
-.site-nav a:hover {
-  color: var(--text);
+.running-head a:hover {
+  color: var(--accent);
   text-decoration: none;
+}
+
+.running-head .site-name {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* middot between items */
+.running-head a + a::before {
+  content: '\00B7';
+  color: var(--border);
+  margin: 0 0.75em;
+  letter-spacing: 0;
 }
 
 /* ============================================================
@@ -129,30 +133,30 @@ main {
 
 .site-footer p {
   margin: 0;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-variant: small-caps;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
   color: var(--text-muted);
 }
 
 .footer-links {
   display: flex;
+  align-items: center;
   gap: 1.25rem;
 }
 
 .footer-links a {
-  font-size: 0.65rem;
-  font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--text-muted);
   transition: color 0.15s;
 }
 
 .footer-links a:hover {
-  color: var(--text);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -164,29 +168,30 @@ main {
 }
 
 .hero-eyebrow {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--accent);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
   display: block;
 }
 
 .hero h1 {
-  font-size: clamp(2.25rem, 6vw, 3.25rem);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 3.6rem);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   color: var(--text);
   margin: 0 0 1.25rem;
   line-height: 1.1;
 }
 
 .hero-desc {
-  font-size: 1.05rem;
+  font-size: 1.28rem;
   color: var(--text-muted);
-  line-height: 1.65;
+  line-height: 1.6;
   margin-bottom: 2.25rem;
 }
 
@@ -199,17 +204,17 @@ main {
 
 .hero-meta {
   margin-top: 1.5rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--text-muted);
 }
 
 .hero-meta a {
-  color: var(--text-muted);
+  color: var(--accent);
   text-decoration: none;
 }
 
 .hero-meta a:hover {
-  color: var(--text);
+  color: var(--accent-bright);
 }
 
 /* ============================================================
@@ -218,18 +223,18 @@ main {
 .btn {
   display: inline-flex;
   align-items: center;
-  padding: 0.55rem 1.2rem;
-  font-size: 0.7rem;
-  font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  border-radius: 1px;
+  padding: 0.5rem 1.3rem;
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
   text-decoration: none;
   transition: all 0.15s;
   border: 1px solid transparent;
   cursor: pointer;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .btn:hover {
@@ -238,11 +243,11 @@ main {
 
 .btn-primary {
   background: var(--accent);
-  color: #0a0a0a;
+  color: #f4ecd6;
 }
 
 .btn-primary:hover {
-  background: #e0901e;
+  background: var(--accent-bright);
 }
 
 .btn-outline {
@@ -251,8 +256,8 @@ main {
 }
 
 .btn-outline:hover {
-  border-color: var(--text-muted);
-  color: var(--text);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* ============================================================
@@ -267,14 +272,14 @@ main {
 }
 
 .section-title {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.6rem;
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -295,21 +300,22 @@ main {
 }
 
 .card:hover {
-  background: #1a1a1a;
+  background: #e4d6b3;
 }
 
 .card h3 {
-  font-size: 0.95rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
   font-weight: 600;
-  color: #fff;
-  letter-spacing: -0.01em;
+  color: var(--ink-strong);
+  letter-spacing: 0;
   margin: 0 0 0.5rem;
 }
 
 .card p {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.55;
   margin: 0;
 }
 
@@ -322,22 +328,22 @@ main {
 .social-link {
   display: inline-flex;
   align-items: center;
-  font-size: 0.68rem;
-  font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--text-muted);
   text-decoration: none;
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 0.9rem;
   border: 1px solid var(--border);
-  border-radius: 1px;
+  border-radius: 2px;
   transition: all 0.15s;
 }
 
 .social-link:hover {
-  color: var(--text);
-  border-color: var(--text-muted);
+  color: var(--accent);
+  border-color: var(--accent);
   text-decoration: none;
 }
 
@@ -346,14 +352,23 @@ main {
 }
 
 .nav-list {
-  list-style: disc;
-  padding-left: 1.25rem;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
 }
 
 .nav-list li {
   color: var(--text-muted);
-  font-size: 0.925rem;
+  font-size: 1.08rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.nav-list li::before {
+  content: '\203A';           /* › single-guillemet marker */
+  position: absolute;
+  left: 0;
+  color: var(--accent);
 }
 
 .nav-list li + li {
@@ -361,7 +376,7 @@ main {
 }
 
 .nav-list a {
-  font-size: 0.925rem;
+  font-size: 1.08rem;
   color: var(--accent);
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
@@ -382,22 +397,22 @@ main {
   width: 100%;
   max-width: 100%;
   display: block;
-  filter: invert(1) hue-rotate(180deg);
-  border-radius: 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
 }
 
 .contact-line {
-  font-size: 0.925rem;
+  font-size: 1.08rem;
   color: var(--text-muted);
 }
 
 .contact-line a {
-  color: var(--text-muted);
+  color: var(--accent);
   text-decoration: none;
 }
 
 .contact-line a:hover {
-  color: var(--text);
+  color: var(--accent-bright);
 }
 
 /* ============================================================
@@ -409,34 +424,37 @@ main {
 
 /* Headings */
 .prose h1 {
-  font-size: 2.25rem;
+  font-family: var(--font-display);
+  font-size: 2.6rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   color: var(--text);
   line-height: 1.15;
   margin: 0 0 0.5rem;
 }
 
 .prose h2 {
-  font-size: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin: 2.5rem 0 0.5rem;
-  padding-bottom: 0.5rem;
+  letter-spacing: 0;
+  color: var(--text);
+  margin: 2.75rem 0 0.75rem;
+  padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border);
 }
 
 .prose h3 {
-  font-size: 0.975rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text);
-  margin: 2rem 0 0;
+  margin: 1.9rem 0 0;
 }
 
 .prose h4 {
-  font-size: 0.9rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text);
   margin: 1.5rem 0 0;
@@ -445,7 +463,7 @@ main {
 /* Paragraphs */
 .prose p {
   color: var(--text);
-  line-height: 1.75;
+  line-height: 1.65;
   margin: 1rem 0 0;
 }
 
@@ -456,17 +474,17 @@ main {
 /*
  * CV trick: a paragraph containing only <em> immediately after an h3
  * is the job/institution metadata line, e.g. *Company · 2020–2024*
- * We render it as a monospace accent label instead of italic prose.
+ * We render it as an italic serif accent label.
  */
 .prose h3 + p {
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
   margin-bottom: 0;
 }
 
 .prose h3 + p > em:only-child {
-  font-style: normal;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-style: italic;
+  font-family: var(--font-body);
+  font-size: 1rem;
   color: var(--accent);
   letter-spacing: 0.01em;
 }
@@ -475,7 +493,7 @@ main {
 .prose a {
   color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
   text-underline-offset: 3px;
   transition: text-decoration-color 0.15s;
 }
@@ -487,15 +505,27 @@ main {
 /* Lists */
 .prose ul,
 .prose ol {
-  color: var(--text-muted);
+  color: var(--text);
   padding-left: 1.5rem;
   margin: 0.75rem 0 0;
-  font-size: 0.925rem;
-  line-height: 1.7;
+  font-size: 1.08rem;
+  line-height: 1.6;
 }
 
 .prose ul {
-  list-style: disc;
+  list-style: none;
+  padding-left: 1.4rem;
+}
+
+.prose ul > li {
+  position: relative;
+}
+
+.prose ul > li::before {
+  content: '\203A';           /* › */
+  position: absolute;
+  left: -1.1rem;
+  color: var(--accent);
 }
 
 .prose ol {
@@ -508,14 +538,14 @@ main {
 
 /* Bold inside list items (e.g. skill labels: **Languages** — ...) */
 .prose li strong {
-  color: var(--text);
-  font-weight: 500;
+  color: var(--ink-strong);
+  font-weight: 700;
 }
 
 /* Strong / emphasis */
 .prose strong {
-  color: #fff;
-  font-weight: 600;
+  color: var(--ink-strong);
+  font-weight: 700;
 }
 
 .prose em {
@@ -527,7 +557,7 @@ main {
 .prose hr {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 0.75rem 0;
+  margin: 2rem 0;
 }
 
 /* Blockquote */
@@ -540,12 +570,13 @@ main {
 .prose blockquote p {
   color: var(--text-muted);
   font-style: italic;
+  font-size: 1.15rem;
 }
 
 /* Inline code */
 .prose code {
   font-family: var(--font-mono);
-  font-size: 0.85em;
+  font-size: 0.82em;
   background: var(--surface);
   color: var(--accent);
   padding: 0.15em 0.4em;
@@ -556,11 +587,11 @@ main {
 .prose pre {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 1.25rem;
   overflow-x: auto;
   margin: 1.5rem 0 0;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
@@ -575,7 +606,7 @@ main {
 .prose table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  font-size: 1.02rem;
   margin: 1.5rem 0 0;
 }
 
@@ -583,12 +614,12 @@ main {
   text-align: left;
   padding: 0.5rem 0.75rem;
   border-bottom: 2px solid var(--border);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
 }
 
 .prose td {
@@ -605,35 +636,35 @@ main {
    Blog
    ============================================================ */
 .post-subtitle {
-  font-size: 1.05rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
   font-style: italic;
-  color: #6b6456;
-  margin: 0.35rem 0 0;
-  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin: 0.4rem 0 0;
+  line-height: 1.45;
 }
 
 .post-date {
   display: block;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  font-size: 1rem;
+  font-style: italic;
   color: var(--accent);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
   margin: 0.25rem 0 2rem;
 }
 
 
 /* ============================================================
-   Spice Easter Egg
+   Spice Easter Egg (deliberately its own dark, otherworldly world)
    ============================================================ */
 .spice-btn {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 0.65rem;
-  font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 1rem;
   color: var(--border);
   padding: 0;
   transition: color 0.2s;
@@ -710,11 +741,10 @@ main {
 }
 
 .spice-text {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
   color: rgba(100, 140, 220, 0.7);
   animation: spice-fade-text 4s ease-in-out infinite;
 }
@@ -744,6 +774,7 @@ main {
     --text:       #111;
     --text-muted: #444;
     --accent:     #555;
+    --ink-strong: #000;
   }
 
   body {
@@ -777,9 +808,67 @@ main {
 }
 
 /* ============================================================
+   Photo gallery (tiled mosaic)
+   ============================================================ */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: dense;
+  gap: 0.6rem;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Neutralise .prose link styling for image tiles */
+.photo-gallery a {
+  display: block;
+  text-decoration: none;
+  border: 0;
+  line-height: 0;
+}
+
+.photo-gallery a::before {
+  content: none;                /* cancel prose bullet marker */
+}
+
+.photo-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.photo-gallery a:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.04) sepia(0.06);
+}
+
+/*
+ * Mosaic: automatic varied tile sizes for visual rhythm. object-fit: cover
+ * means any photo crops cleanly into whatever cell it lands in. Override on a
+ * specific tile with class="big" | "wide" | "tall" if you want to place it.
+ */
+.photo-gallery > *:nth-child(6n + 1) { grid-column: span 2; grid-row: span 2; }
+.photo-gallery > *:nth-child(6n + 4) { grid-row: span 2; }
+.photo-gallery > *:nth-child(6n + 5) { grid-column: span 2; }
+
+.photo-gallery .big  { grid-column: span 2; grid-row: span 2; }
+.photo-gallery .wide { grid-column: span 2; grid-row: span 1; }
+.photo-gallery .tall { grid-column: span 1; grid-row: span 2; }
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 560px) {
+  body {
+    font-size: 1.1rem;
+  }
+
   .site-nav {
     gap: 1.25rem;
   }
@@ -794,6 +883,6 @@ main {
   }
 
   .prose h1 {
-    font-size: 1.875rem;
+    font-size: 2.1rem;
   }
 }
